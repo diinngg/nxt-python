@@ -272,6 +272,9 @@ class Motor(BaseMotor):
         
     def get_tacho(self):
         return self._read_state()[1]
+
+    def get_run_state(self):
+        return self._read_state()[0].run_state
         
     def reset_position(self, relative):
         """Resets the counters. Relative can be True or False"""
